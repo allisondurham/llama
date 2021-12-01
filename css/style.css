@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Aleo', serif;
+    letter-spacing: 2px;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+canvas {
+    width: 100%;
+    height: 80%;
+    background:url(images/vgsunsetc2.jpeg) repeat-x;
+    background-size:cover;
+}
+
+#stats {
+    background: url('images/turf2.png');
+    background-size: repeat;
+    height: 20%;
+}
+
+.statbox {
+    margin-top: 1%;
+    margin-left: 2%;
+    float: left;
+    background: linear-gradient(to right, rgb(11, 61, 11) , rgb(114, 85, 22));
+    border: 0px solid gray;
+    border-radius: 10px;
+    color: bisque;
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.statbox:hover {
+    box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
+}
+
+.player {
+    height: 70%;
+    width: 10%;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.player:nth-of-type(1){
+    margin-left: 23%;
+}
+
+#name1,#name2{
+    position: relative;
+    top: 10px;
+}
+
+.player p:nth-of-type(1){
+    margin: 0;
+    padding: 0;
+}
+
+#move{
+    width: 6%;
+    text-align: center;
+    height: 50%;
+    padding-top: 8px;
+}
+
+#move p{
+    margin: 3px;
+}
+
+#move button{
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    color: black;
+    background-color: bisque;
+    border: 0px solid black;
+    font-size: 1.2em;
+    top: 12px;
+    height: 35%;
+    width: 30%;
+}
+
+#move button:hover{
+    background-color: #ccc;
+}
+
+#move button:active{
+    background-color: #ccc; 
+    animation: bounceleft .3s alternate ease infinite;
+}
+
+#move button+button:active{
+    background-color: #ccc; 
+    animation: bounceright .3s alternate ease infinite;
+}
+
+button:focus{outline: 0;}
+
+#spitAndPower{
+    width: 10%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+#spitAndPower button{
+    font-family: 'Aleo', serif;
+    letter-spacing: 6px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    height: 28%;
+    background: linear-gradient(to right, rgb(219, 140, 36) , rgb(206, 98, 98));
+    box-shadow: 0 7px rgb(223, 163, 72);
+    transition: initial;
+}
+
+#spitAndPower button:hover{
+    background: linear-gradient(to right, #df6807, rgb(235, 5, 166));
+}
+
+#spitAndPower button:active{
+    background-color: #cc0000;
+    box-shadow: 0 4px rgb(223, 163, 72);
+    transform: translateY(3px);
+}
+
+#angle{
+    width: 9%;
+    text-align: center;
+    height: 50%;
+    padding-top: 5px;
+}
+
+#angle button{
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    font-size: 100%;
+    /* width: 25%;
+    height: 25%; */
+    /* position: relative; */
+    font-style: normal;
+    font-weight: 900;
+    color: bisque;
+    cursor: pointer;
+    border-radius: 50%;
+    color: black;
+    background-color: bisque;
+    border: 0px solid black;
+    top: 12px;
+    height: 35%;
+    width: 20%;
+}
+
+#angle input{
+    vertical-align: top;
+    background: none;
+    border: none;
+    margin: 0;
+    margin-top: 10%;
+    padding: 0;
+    width: 25%;
+    height: 25%;
+    font-size: 100%;
+    color: bisque;
+    text-align: center;
+}
+
+#angle p{
+    margin: 0;
+    margin-top: 10px;
+}
+
+#power p{
+    margin: 0;
+    font-size: 100%;
+}
+
+#power{
+    width: 106%;
+    text-align: center;
+    height: 40%;
+    padding-top: 8px;
+    margin-top: 44%;
+    background: linear-gradient(to right, rgb(11, 61, 11) , rgb(114, 85, 22));
+    border: 0px solid gray;
+    border-radius: 10px;
+    color: bisque;
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+#power input[type="text"]{
+    position: relative;
+    background: none;
+    border: none;
+    width: 25%;
+    height: 28%;
+    font-size: 98%;
+    color: bisque;
+    text-align: center;
+}
+
+.slidecontainer{
+    position: relative;
+    top: 20%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slider{
+    -webkit-appearance: none;
+    width: 90%;
+    height: 10px;
+    border-radius: 5px;
+    background: bisque;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(209, 102, 102);
+    cursor: pointer;
+}
+
+#winnerBox{
+    display: none;
+    /* background: rgb(126, 146, 118); */
+    /* background: linear-gradient(to right, rgb(219, 140, 36) , rgb(206, 98, 98)); */
+    background:url(images/vgsunsetc2.jpeg) repeat-x;
+    background-size:cover;
+    /* border-radius: 25px; */
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    width: 40%;
+    margin: 0 auto;
+    top: 25%;
+    color: bisque;
+    padding: 5%;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+#winnerBox button {
+    /* background: none; */
+    color: bisque;
+    border: 1px solid bisque;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 300;
+    background: linear-gradient(to right, rgb(219, 140, 36) , rgb(206, 98, 98));
+    box-shadow: 0 9px rgb(223, 163, 72);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Aleo', serif;
+}
+
+#winnerBox button:hover { 
+    background: #d8a188; color: bisque; 
+    background: linear-gradient(to right, #df6807, rgb(235, 5, 166));
+}
+#winnerBox button:focus { outline: none; }
+#winnerBox button:active{
+    background-color: #cc0000;
+    box-shadow: 0 5px rgb(223, 163, 72);
+    transform: translateY(4px);
+}
+
+
+@-webkit-keyframes bounceright {
+    from { -webkit-transform: translateX(0); }
+    to   { -webkit-transform: translateX(8px); }
+}
+
+@-webkit-keyframes bounceleft {
+    from { -webkit-transform: translateX(0); }
+    to   { -webkit-transform: translateX(-8px); }
+}
+
+@-webkit-keyframes bounceup {
+    from { -webkit-transform: translateY(0); }
+    to   { -webkit-transform: translateY(8px); }
+}
+
+@-webkit-keyframes bouncedown {
+    from { -webkit-transform: translateY(0); }
+    to   { -webkit-transform: translateY(-8px); }
+}
+
+@-webkit-keyframes clouds {
+    from{ background-position: 0px; }
+    to{ background-position: -1200px; }
+}

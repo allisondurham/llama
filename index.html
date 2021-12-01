@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>llama</title>
+        <link rel="shortcut icon" href="css/images/favicon.ico">
+        <link rel="stylesheet" type = "text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <canvas></canvas>
+        <div id="stats">
+            <div class="player statBox" id="player1">
+                <p><span id="name1">player_1</span><br><p>score : <span id="score1">0</span></p></p>
+            </div>
+            <div id="move" class="statBox">
+                <p>move</p>
+                <button id="left">&#8249;</button>
+                <button id="right">&#8250;</button>
+            </div>
+            <div id="spitAndPower">
+                <button class="statBox">SPIT</button>
+                <div id="power">
+                <p>power  : <input type="text" name="power" value=50></p>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                </div>
+            </div>
+
+        <div id="angle" class="statBox">
+            <p>angle</p>
+            <button><i class="material-icons" id="+">&#8743;</i></button>  
+            <input type="text" name="angle_val" value=50>
+            <button><i class="material-icons" id="-">&#8744;</i></button>
+        </div>
+
+            <div class="player statBox" id="player2">
+            <p><span id="name2">player_2</span><br><p>score : <span id="score2">0</span></p></p>
+            </div>
+        </div>
+
+        <div id="winnerBox">
+            <span>winner name!</span>  
+            <br>
+            <button>play again?</button>
+        </div>
+
+        <script type="text/javascript" src="javascript/terrain.js"></script>
+        <script type="text/javascript" src="javascript/llamas.js"></script>
+        <script type="text/javascript" src="javascript/spit.js"></script>
+        <script type="text/javascript" src="javascript/listeners.js"></script>
+        <script type="text/javascript" src="javascript/scores.js"></script>
+        <script type="text/javascript" src="javascript/main.js"></script>
+    </body>
+</html>
