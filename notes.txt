@@ -1,0 +1,33 @@
+improvements:
+-------------  
+  
+        1. indicator for who's turn
+        ----------------------------
+            main.js in switchTurn()
+                var p1 = document.querySelectorAll(".player.statBox#player1");
+                var p2 = document.querySelector(".player.statBox#player2");
+                    p1.style.background = "url(css/images/bokehparty.jpeg";
+                    p2.style.background = "url(css/images/bokehparty.jpeg";
+
+
+        2. arrow keys for MOVE and ANGLE, add more event listeners to enable key usage additionally. 
+        ---------------------------------------------------------------------------------------
+
+        3. llama heads that change angle to shoot from vs vector
+        -----------------------------------------------------
+
+        4. responsive sizing for text, llamas, spitwads, explosion.  classes for objects?
+        ------------------------------------------------------------------------------ 
+        
+
+
+bugs:
+---------
+    1. time gets faster with each "play again"  -- which variable(s) is not being cleared?
+    2. spitwads explode too high -- which variable determines explosion height?
+    3. angle arrows slanted like they're italicized -- cant find that anywhere
+    4. collision detection on left wall isnt there causing overpowered R shots to misfire and throw error code "undefined y"
+
+
+
+

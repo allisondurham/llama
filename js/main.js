@@ -53,7 +53,7 @@ function goAhead(){
 
 
 function switchTurn(){
-    var turns = 1;
+    var turns = 5;
 
     if(llamaleft.turn === true){
         updateAnglePower("right");
